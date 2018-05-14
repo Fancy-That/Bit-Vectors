@@ -1,7 +1,7 @@
 const bitVector=function(length){
 	this.v=new Uint8Array(length>>3);
 	this.toggleBit=(pos)=>{this.v[pos>>3]^=1<<pos%8;};
-	this.getBit=(pos)=>{return(this.v[pos>>3]&1<<pos%8)?true:false;};
+	this.getBit=(pos)=>{return this.v[pos>>3]&1<<pos%8?true:false;};
 };
 
 
